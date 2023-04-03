@@ -1,15 +1,21 @@
-package Homework4.Task1;
+package Homework6.Task2;
 
-import Homework4.Task1.Builders.Builder;
-import Homework4.Task1.Builders.EngineBuilder;
-import Homework4.Task1.Builders.TransmissionBuilder;
-import Homework4.Task1.Builders.WheelBuilder;
-import Homework4.Task1.CarParts.Engine;
+import Homework6.Task2.Builders.Builder;
+import Homework6.Task2.Builders.EngineBuilder;
+import Homework6.Task2.Builders.TransmissionBuilder;
+import Homework6.Task2.Builders.WheelBuilder;
 
 public class Director {
     private Builder builder;
 
-    public Director(Builder builder) {
+    private Director() {
+    }
+    final static private Director instance = new Director();
+    public static Director getInstance() {
+        return instance;
+    }
+
+    public void setBuilder(Builder builder) {
         this.builder = builder;
     }
 

@@ -18,7 +18,7 @@ public class Director {
                 .setTransmission(new TransmissionBuilder().setAutomatic(false).setNumberOfGears(6).build())
                 .setWheels(new WheelBuilder().setDiameter(22).setMaterial("rubber").build())
                 .setColor(color).setTires(tires).build();
-        System.out.println("Sedan was built");
+        System.out.println("Jeep was built");
         return car;
     }
 
